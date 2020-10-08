@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- bootstrap cdn -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+    integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <!-- google fonts cdn -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto&family=Russo+One&display=swap"
+    rel="stylesheet">
+  <!-- font awesome cdn -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- original css -->
+  <link rel="stylesheet" href="css/style.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="container-fluid vh-100 bg-dark">
+
+    <!-- banner -->
+    <nav class="row bg-danger text-light">
+      <div id="logo" class="navbar logo w-100">
+        <h3 class="nav-item nav-link text-light">RockPaperScissors</h3>
+      </div>
+    </nav>
+
+    <!-- header stats -->
+    <header class="row stats bg-info">
+
+      <div class="col-6">
+        <div class="row bg-light text-dark text-center h-50">
+          <div class="col-6 card h-100">
+            <h5 class="m-auto">Wins</h5>
+          </div>
+          <div class="col-6 card h-100">
+            <span id="wins" class="m-auto"></span>
+          </div>
+        </div>
+        <div class="row bg-light text-dark text-center h-50">
+          <div class="col-6 card h-100">
+            <h5 class="m-auto">Losses</h5>
+          </div>
+          <div class="col-6 card h-100">
+            <span id="losses" class="m-auto"></span>
+          </div>
+        </div>
+      </div>
+
+
+
+      <!-- player cards -->
+      <!-- user -->
+      <div class="col-6">
+        <div class="row bg-light text-dark text-center h-100">
+          <div class="col-6 bg-light text-dark h-100 w-100">
+            <h5 id="userCardTitle" class="user-card-title"></h5>
+          </div>
+          <!-- comp -->
+          <div class="col-6 card bg-light text-dark h-100 w-100">
+            <h5 id="compCardTitle" class="comp-card-title"></h5>
+          </div>
+        </div>
+      </div>
+    </header>
+
+
+
+    <!-- arena -->
+    <main class="row h-50 bg-light text-center arena-container">
+
+      <div id="newGameOverlay" class="col-12 d-flex justify-content-center new-game-overlay h-100">
+        <form id="newGameForm" action="#" onsubmit="startNewGame()"
+          class="d-flex flex-column align-self-center w-50">
+          <input class="form-control text-center" type="text" name="userName" id="userName" placeholder="Enter Name"
+            required>
+          <button type="submit" id="newGameButton" class="form-control btn btn-dark">New Game</button>
+        </form>
+      </div>
+
+      <!-- vs -->
+      <div class="col-12 arena hidden">
+        <div class="row">
+          <div class="col-12 comp-arena">
+            <div id="compArenaImg" class="comp-card-img"><img class="h-100 edward" src="" alt=""></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 user-arena">
+            <div id="userArenaImg" class="user-card-img"><img class="h-100 thing" src="" alt=""> </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <!-- hidden elements -->
+      <div class="col-12 arena-text match-begin hidden">
+        <h1 id="matchBegin">3</h1>
+      </div>
+      <div class="col-12 arena-text match-result hidden">
+        <h1 id="matchResult">You Win!</h1>
+      </div>
+    </main>
+
+
+
+    <!-- controller -->
+    <footer class="row controller bg-info">
+      <div class="col-4 p-3">
+        <button class="btn btn-light h-100 w-100 d-block m-auto rounded-circle border border-dark control rock"
+          onclick="setUserWeapon('rock')">
+          <i class="fa fa-hand-rock-o"></i>
+        </button>
+      </div>
+      <div class="col-4 p-3">
+        <button class="btn btn-light h-100 w-100 d-block m-auto rounded-circle border border-dark control paper"
+          onclick="setUserWeapon('paper')">
+          <i class="fa fa-hand-paper-o"></i>
+        </button>
+      </div>
+      <div class="col-4 p-3">
+        <button class="btn btn-light h-100 w-100 d-block m-auto rounded-circle border border-dark control scissors"
+          onclick="setUserWeapon('scissors')">
+          <i class="fa fa-hand-scissors-o"></i>
+        </button>
+      </div>
+    </footer>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+    integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+    integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+    crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
+  </div>
+</body>
+
+</html>

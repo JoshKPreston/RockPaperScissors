@@ -1,0 +1,98 @@
+
+
+/*
+font-family: 'Roboto', sans-serif;
+font-family: 'Russo One', sans-serif;
+font-family: 'Press Start 2P', 'Lucida Console';
+*/
+
+* {
+    //outline: 1px solid yellow;
+}
+
+.logo {
+  height: 10vh;
+  font-family: 'Russo One', sans-serif;
+}
+
+.logo h3 {
+  text-decoration: underline line-through;
+  font-style: italic;
+}
+
+.stats {
+  height: 20vh;
+}
+
+.new-game-overlay {
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  z-index: 1;
+}
+
+button#newGame {
+  font-family: 'Press Start 2P', 'Lucida Console';
+}
+
+.arena-text {
+  position: absolute;
+  bottom: 43vh;
+  right: 0;
+}
+
+.controller {
+  height: 20vh;
+}
+
+.control {
+    box-shadow: 0px 1px 3px 0px #000;
+}
+
+.control:active {
+    color: chartreuse;
+}
+
+.fa {
+    font-size: 3em;
+}
+
+.match-result {
+    font-size: 4em;
+}
+
+.hidden {
+    display: none;
+}
+
+.thing {
+  background: url('../img/th1.jpg') no-repeat center;
+}
+
+.origami {
+  background: url('../img/tp1.jpg') no-repeat center;
+}
+
+.edward {
+  background: url('../img/ed1.jpg') no-repeat center;
+}
+
+.slide-out-fwd-center {
+	animation: slide-out-fwd-center 0.7s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+@keyframes slide-out-fwd-center {
+  0% {
+    transform: translateZ(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateZ(600px);
+    opacity: 0;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .fa {
+      font-size: 6em;
+  }
+}
